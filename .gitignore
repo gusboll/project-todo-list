@@ -1,0 +1,17 @@
+# Dependências (Nunca envie isso!)
+node_modules/
+
+# Logs de erro do npm
+npm-debug.log*
+
+# Pasta de build (Opcional)
+# Alguns preferem não enviar a pasta dist porque ela é gerada automaticamente
+dist/
+
+# Arquivos do Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Configurações de IDE (opcional)
+.vscode/
+.idea/
