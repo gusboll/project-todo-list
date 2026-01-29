@@ -8,34 +8,98 @@
 <body>
     <div class="sidebar">
         <div class="buttons">
-            <button id="homeUserButton">
+            <button id="home-user-button">
                 <!-- home icon, user name-->
-                 Home | Augusto
+                 Home
             </button>
-            <button id="addButton">
+            <button id="add-task">
                 <!-- + add task-->
                 + Add task
             </button>
-            <button id="todayButton">
+            <button id="add-project">
+                <!-- + add project-->
+                 + Add project
+            </button>
+            <button id="today-button">
                 <!-- show scheduled tasks for the current day-->
                  Today
             </button>
-            <button id="calendarButton">
+            <button id="calendar-button">
                 <!-- substitutes whatever is in the notesBackground for a calendar0-->
                  Calendar
             </button>
-            <button id="tasksButton">
+            <button id="tasks-button">
                 <!-- show list of tasks-->
-                 Active tasks
+                 See tasks
+            </button>
+            <button id="projects-button">
+                <!-- show list of projects-->
+                 See projects
             </button>
         </div>
     </div>
 
-    <div class="notesBackground">
+    <div id="main-content">
+        <!--<div id="tasks">
 
+        </div>-->
+        <!--<div id="projects"
+        
+        </div>-->
+        <!-- remove these cards below before running it all on .js-->
+        <div id="card-1">card 1</div>
+        <div id="card-2">card 2</div>
     </div>
+
+    <!-- task dialog-->
+    <dialog id="task-dialog">
+        <form method="dialog" id="task-form">
+        <p>
+            <fieldset>
+                <label for="task-name">Task name:</label>
+                <input type="text" id="task-name" name="task-name" placeholder="Mow the lawn" autofocus required>
+            </fieldset>
+            <fieldset>
+                <label for="task-date">Due by:</label>
+                <input type="date" id="task-date" name="task-date" placeholder="19/10/1996" autofocus required>
+            </fieldset>
+            <div>
+                <button id="cancel-task-button" type="reset" class="cancel-task-button">Cancel</button>
+                <button id="confirm-task-button" type="submit" class="confirm-task-button">Confirm</button>
+            </div>
+        </form>
+    </dialog>
+    <!-- project dialog-->
+    <dialog id="project-dialog">
+        <form method="dialog" id="project-form">
+        <p>
+            <fieldset>
+                <label for="project-name">Project name:</label>
+                <input type="text" id="project-name" name="project-name" placeholder="Grocery shopping" autofocus required>
+            </fieldset>
+            <fieldset>
+                <label for="project-date">Due by:</label>
+                <input type="date" id="project-date" name="project-date" placeholder="01/01/2027" autofocus required>
+            </fieldset>
+            <fieldset>
+                <label for="project-tasks">Project tasks:</label>
+                <p>
+                <input type="text" id="project-task-1" name="project-task-1" placeholder="First we need to..." autofocus required>
+                <input type="text" id="project-task-2" name="project-task-2" placeholder="Then we need to..." autofocus>
+                <input type="text" id="project-task-3" name="project-task-3" placeholder="And then we got to..." autofocus>
+            </fieldset>
+
+            <div>
+                <button id="cancel-project-button" type="reset" class="cancel-project-button">Cancel</button>
+                <button id="confirm-project-button" type="submit" class="confirm-project-button">Confirm</button>
+            </div>
+
+        </form>
+    </dialog>
+
+
     <div class="footer">
-        <p>Copyright @ 2025 Gusboll </p>
+        <p>Copyright @ 2026 Gusboll </p>
         <a href="https://github.com/gusboll" target="_blank">
             <img class="github-logo" src="./icons/github-mark.svg">
         </a>

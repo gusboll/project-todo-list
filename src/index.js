@@ -1,21 +1,69 @@
-import { title } from 'process';
 import './style.css';
-
 
 console.log("Funcionando");
 
-const homeUserButton = document.getElementById("homeUserButton");
-const addButton = document.getElementById("addButton");
-const todayButton = document.getElementById("todayButton");
-const calendarButton = document.getElementById("calendarButton");
-const tasksButton = document.getElementById("tasksButton");
 
+
+
+
+// get elements by id
+const homeUserButton = document.getElementById("home-user-button");
+const addTaskButton = document.getElementById("add-task");
+const addProjectButton = document.getElementById("add-project");
+const todayButton = document.getElementById("today-button");
+const calendarButton = document.getElementById("calendar-button");
+const tasksButton = document.getElementById("tasks-button");
+const projectsButton = document.getElementById("projects-button");
+const taskDialog = document.getElementById("task-dialog");
+const projectDialog = document.getElementById("project-dialog");
+const cancelTaskButton = document.getElementById("cancel-task-button");
+const confirmTaskButton = document.getElementById("confirm-task-button");
+const cancelProjectButton = document.getElementById("cancel-project-button");
+const confirmProjectButton = document.getElementById("confirm-project-button");
+const taskForm = document.getElementById("task-form");
+const projectForm = document.getElementById("project-form")
+
+//buttons event listeners
 homeUserButton.addEventListener("click", () =>{
     console.log("homeUserButton clicked")
 })
 
-addButton.addEventListener("click", () =>{
-    console.log("addButton clicked")
+//task buttons
+addTaskButton.addEventListener("click", () =>{
+    console.log("addTask clicked");
+    taskForm.reset();
+    taskDialog.showModal();
+})
+
+cancelTaskButton.addEventListener("click", () =>{
+    console.log("cancelTaskButton clicked");
+    taskDialog.close();
+})
+
+taskForm.addEventListener("submit", (event) =>{
+    console.log("confirmTaskButton clicked");
+    event.preventDefault();
+    taskDialog.close();
+    //code for inserting the task in the constructor
+})
+
+//project buttons
+addProjectButton.addEventListener("click", () =>{
+    console.log("addProject clicked")
+    projectForm.reset();
+    projectDialog.showModal();
+})
+
+cancelProjectButton.addEventListener("click", () =>{
+    console.log("cancelProjectButton clicked");
+    projectDialog.close();
+})
+
+projectForm.addEventListener("submit", (event) =>{
+    console.log("confirmProjectButton clicked");
+    event.preventDefault();
+    projectDialog.close();
+    //code for inserting the task in the constructor
 })
 
 todayButton.addEventListener("click", () =>{
@@ -29,6 +77,14 @@ calendarButton.addEventListener("click", () =>{
 tasksButton.addEventListener("click", () =>{
     console.log("tasksButton clicked")
 })
+
+projectsButton.addEventListener("click", () => {
+    console.log("projectsButton clicked")
+})
+
+
+// 
+
 
 // todo items need to have:
 

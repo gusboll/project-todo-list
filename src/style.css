@@ -23,8 +23,11 @@ body{
     background-color: #2dd4bf;
 }
 
-.notesBackground{
+.notes-background{
     background-color: #F8FAFC;
+    margin: 1rem;
+    display: grid;
+    gap: 1rem;
 }
 
 .buttons {
@@ -34,15 +37,37 @@ body{
     gap: 4rem;
 }
 
-#homeUserButton, #addButton, #todayButton, #calendarButton, #tasksButton{
+#home-user-button, #add-task, #today-button, #calendar-button, #tasks-button, #add-project, #projects-button{
     height: 30px;
     border: 0;
     border-radius: 15px;
+    background-color: #f8fafc80;
+    font-weight:800;
 } 
 
-#addButton{
-    background-color: red;
+#add-task, #add-project{
+    background-color: #f08080;
 }
+
+
+
+#main-content{
+    display: grid;
+    padding: 150px;
+    gap: 10px;
+    grid-template: repeat(auto-fill, minmax(250px, 1fr)) / repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+}
+
+/*#tasks
+when showing only tasks or only projects
+#projects*/
+
+/*#tasks-cards
+when showing only tasks cards or only projects cards
+#projectscards*/
+
+
 
 /* footer and icon code */
 
