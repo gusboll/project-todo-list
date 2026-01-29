@@ -1,0 +1,71 @@
+/* body and general code */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+
+body{
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    margin: 0px;
+    display: grid;
+    grid-template: 9fr 1fr / 2fr 8fr;
+    height: 100%;
+}
+
+/* main code */
+
+.sidebar{
+    background-color: #2dd4bf;
+}
+
+.notesBackground{
+    background-color: #F8FAFC;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    gap: 4rem;
+}
+
+#homeUserButton, #addButton, #todayButton, #calendarButton, #tasksButton{
+    height: 30px;
+    border: 0;
+    border-radius: 15px;
+} 
+
+#addButton{
+    background-color: red;
+}
+
+/* footer and icon code */
+
+.footer{
+    display: flex;
+    grid-area: 2 / 1 / 2 / 3;
+    justify-content: center;
+    background-color: #94A3B8;
+    align-items: center;
+    color: black;
+    margin: 0;
+    height: 100%;
+    gap: 10px;
+}
+
+.github-logo{
+    max-width: 28px;
+    max-height: 28px;
+    color: var(--black);
+    transition: transform 0.3s ease-in-out;
+    filter: invert(99%) sepia(26%) saturate(179%) hue-rotate(297deg) brightness(113%) contrast(100%);
+}
+
+img:hover{
+    transform: rotate(360deg) scale(1.2);
+}
