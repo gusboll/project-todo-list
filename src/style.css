@@ -53,7 +53,7 @@ body{
 
 #main-content{
     padding: 50px;
-    background-color: grey;
+    background-color: #2dd4bf50;
 }
 
 /*#tasks
@@ -67,7 +67,6 @@ when showing only tasks cards or only projects cards
 #tasks{
     display: flex;
     gap: 20px;
-    background-color: orange;
     flex-wrap: wrap;
 }
 

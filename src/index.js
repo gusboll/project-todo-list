@@ -20,8 +20,6 @@ const taskForm = document.getElementById("task-form");
 const projectForm = document.getElementById("project-form")
 const tasksDisplay = document.getElementById("tasks");
 const projectsDisplay = document.getElementById("projects");
-const doneTaskButton = document.getElementById("done-task");
-const removeTaskButton = document.getElementById("remove-task");
 
 //constructor for all tasks
 
@@ -70,14 +68,17 @@ function displayTasks(){
         newTask.innerHTML = `
         <div class = "task-title"><h3>${task.taskTitle}</h3></div>
         <div class = "task-due-by">Due by: ${task.taskDueBy}</div>
-        <button id = "done-task">Done</button>
-        <button id = "remove-task">Remove</button>
+        <button id = "done-task" >Done</button>
+        <button id = "remove-task" >Remove</button>
         `
         //add task done or remove task buttons
         tasksDisplay.appendChild(newTask);
         })
         
 }
+
+const doneTaskButton = document.getElementById("done-task");
+const removeTaskButton = document.getElementById("remove-task");
 
 //function to show all projects
 
@@ -100,18 +101,6 @@ cancelTaskButton.addEventListener("click", () =>{
 })
 
 //done and remove buttons for tasks
-doneTaskButton.addEventListener("click", () =>{
-    console.log("DoneTaskButton clicked");
-
-})
-
-removeTaskButton.addEventListener("click", () =>{
-    console.log("removeTaskButton clicked");
-    const 
-    if (index > - 1){
-        displayTasks();
-    }
-})
 
 
 
@@ -161,6 +150,7 @@ calendarButton.addEventListener("click", () =>{
 
 tasksButton.addEventListener("click", () =>{
     console.log("tasksButton clicked")
+    displayTasks();
 })
 
 projectsButton.addEventListener("click", () => {
