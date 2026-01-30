@@ -54,6 +54,9 @@ body{
 #main-content{
     padding: 50px;
     background-color: #2dd4bf50;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 /*#tasks
@@ -64,13 +67,13 @@ when showing only tasks or only projects
 when showing only tasks cards or only projects cards
 #projectscards*/
 
-#tasks{
+#tasks, #projects{
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.task{
+.task, .project{
     background-color: lightblue;
     border-radius: 15px;
     display: flex;
@@ -79,21 +82,21 @@ when showing only tasks cards or only projects cards
     gap: 5px;
 }
 
-#done-task, #remove-task{
+#done-task, #remove-task, #done-project, #remove-project{
     border: 0px;
 }
 
-#done-task{
+#done-task, #done-project{
     background-color: lightgreen;
     font-weight: bold;
 }
 
-#remove-task{
+#remove-task, #remove-project{
     background-color: lightcoral;
     font-weight: bold;
 }
 
-.task div{
+.task div, .project div{
     display: grid;
     justify-content: center;
 }

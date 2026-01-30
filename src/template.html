@@ -61,6 +61,14 @@
                 <label for="task-date">Due by:</label>
                 <input type="date" id="task-date" name="task-date" placeholder="19/10/1996" autofocus required>
             </fieldset>
+            <fieldset>
+                <label for="task-priority">Priority:</label>
+                <select id="task-priority" name="task-priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </fieldset>
             <div>
                 <button id="cancel-task-button" type="reset" class="cancel-task-button">Cancel</button>
                 <button id="confirm-task-button" type="submit" class="confirm-task-button">Confirm</button>
@@ -86,7 +94,14 @@
                 <input type="text" id="project-task-2" name="project-task-2" placeholder="Then we need to..." autofocus>
                 <input type="text" id="project-task-3" name="project-task-3" placeholder="And then we got to..." autofocus>
             </fieldset>
-
+            <fieldset>
+                <label for="project-priority">Priority</label>
+                <select id="project-priority" name="project-priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </fieldset>
             <div>
                 <button id="cancel-project-button" type="reset" class="cancel-project-button">Cancel</button>
                 <button id="confirm-project-button" type="submit" class="confirm-project-button">Confirm</button>
