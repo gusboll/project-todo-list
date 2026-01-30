@@ -2,10 +2,6 @@ import './style.css';
 
 console.log("Funcionando");
 
-
-
-
-
 // get elements by id
 const homeUserButton = document.getElementById("home-user-button");
 const addTaskButton = document.getElementById("add-task");
@@ -22,6 +18,69 @@ const cancelProjectButton = document.getElementById("cancel-project-button");
 const confirmProjectButton = document.getElementById("confirm-project-button");
 const taskForm = document.getElementById("task-form");
 const projectForm = document.getElementById("project-form")
+const tasksDisplay = document.getElementById("tasks");
+const projectsDisplay = document.getElementById("projects");
+const doneTaskButton = document.getElementById("done-task");
+const removeTaskButton = document.getElementById("remove-task");
+
+//constructor for all tasks
+
+class storedTasks {
+    constructor(){
+        this.tasks = [];
+    }
+
+    addTask(task){
+        this.tasks.push(task);
+    }
+
+    removeTask(index){
+        this.tasks.splice(index,1);
+    }
+
+    findTaskById(id){
+        return this.tasks.findIndex(b => b.taskId === id);
+    }
+}
+
+const myTasks = new storedTasks();
+
+// constructor for specific tasks
+class Task{
+    constructor(taskTitle, taskDueBy, taskId){
+        this.taskTitle = taskTitle;
+        this.taskDueBy = taskDueBy;
+        this.taskId = taskId;
+    }
+}
+
+//constructor for all projects
+
+//constructor for specific project
+
+//function to show all tasks
+
+function displayTasks(){
+    tasksDisplay.innerHTML = " ";
+        myTasks.tasks.forEach(task => {
+
+        let newTask = document.createElement("div");
+        newTask.classList.add("task");
+
+        newTask.innerHTML = `
+        <div class = "task-title"><h3>${task.taskTitle}</h3></div>
+        <div class = "task-due-by">Due by: ${task.taskDueBy}</div>
+        <button id = "done-task">Done</button>
+        <button id = "remove-task">Remove</button>
+        `
+        //add task done or remove task buttons
+        tasksDisplay.appendChild(newTask);
+        })
+        
+}
+
+//function to show all projects
+
 
 //buttons event listeners
 homeUserButton.addEventListener("click", () =>{
@@ -40,10 +99,36 @@ cancelTaskButton.addEventListener("click", () =>{
     taskDialog.close();
 })
 
+//done and remove buttons for tasks
+doneTaskButton.addEventListener("click", () =>{
+    console.log("DoneTaskButton clicked");
+
+})
+
+removeTaskButton.addEventListener("click", () =>{
+    console.log("removeTaskButton clicked");
+    const 
+    if (index > - 1){
+        displayTasks();
+    }
+})
+
+
+
+//submit and exhibit the tasks
 taskForm.addEventListener("submit", (event) =>{
     console.log("confirmTaskButton clicked");
     event.preventDefault();
     taskDialog.close();
+    let taskName = document.getElementById("task-name").value;
+    let taskDate = document.getElementById("task-date").value;
+    let taskId = crypto.randomUUID();
+    const newTask = new Task (taskName, taskDate, taskId)
+    myTasks.addTask(newTask);
+    //code to display tasks
+    displayTasks();
+    console.log(taskName, taskDate, taskId);
+    return taskName, taskDate, taskId;
     //code for inserting the task in the constructor
 })
 
